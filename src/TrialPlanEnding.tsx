@@ -63,7 +63,7 @@ export function TrialPlan({ endDate, open, onClose }: TrialPlanProps) {
 						fontWeight={600}
 						sx={{ color: "white" }}
 					>
-						Your trial ends in: {format(timeLeft)}
+						Din prøveperiode slutter snart: {format(timeLeft)}
 					</Typography>
 				</Stack>
 			</Paper>
@@ -82,9 +82,9 @@ function format(time: number) {
 	let days: number = time / (1000 * 60 * 60 * 24);
 
 	let format = "";
-	if (days > 0) format += days.toFixed(0) + " days ";
-	if (hours > 0 || days > 0) format += hours.toFixed(0) + " hours ";
-	if (minutes > 0 || hours > 0) format += minutes.toFixed(0) + " minutes ";
-	format += seconds.toFixed(0) + " seconds ";
+	if (days > 0) format += days.toFixed(0) + " Dag ";
+	if (hours > 0 || days > 0) format += hours.toFixed(0) + " Timer ";
+	if (minutes > 0 || hours > 0) format += minutes.toFixed(0) + " Minutter ";
+	format += seconds.toFixed(0) + " Sekunder ";
 	return format;
 }
